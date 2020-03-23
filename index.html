@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="position:absolute;width:100%;height:100%"></div>
+	   <script type="text/javascript" src="js/jquery.min.js"></script>
+       <script type="text/javascript" src="js/echarts.js"></script>
+       <script type="text/javascript" src=" https://api.map.baidu.com/getscript?v=2.0&ak=f8GgvXGNa3rCqHkmrAdAgPm3YFV12uTi"></script>
+       <script type="text/javascript" src="https://gallery.echartsjs.com/dep/echarts/latest/extension/bmap.min.js"></script>
+       <script type="text/javascript" src='js/main.js'></script>
+
+	   <script type="text/javascript" src="js/timeAxis_new.js"></script>
+	   <div class="cx-time-main" id="cxTime" style = 'position:absolute;left:25%;height:10%;width:65%;top:20px'></div>
+	   <link rel="stylesheet" type="text/css" href="./css/timeAxis.css">
+<script type="text/javascript">
+	var oTimeAxiosFun = null;
+	var timeList = [
+
+			{time:'05时'},
+			{time:'06时'},
+			{time:'07时'},
+			{time:'08时'},
+			{time:'09时'},
+			{time:'10时'},
+			{time:'11时'},
+			{time:'12时'},
+			{time:'13时'},
+			{time:'14时'},
+			{time:'15时'},
+			{time:'16时'},
+			{time:'17时'},
+			{time:'18时'},
+			{time:'19时'},
+			{time:'20时'},
+			{time:'21时'},
+			{time:'22时'},
+			{time:'23时'},
+		]
+	$(function () {
+		;//参数列表
+		var param = {
+			data: timeList,
+			id: 'cxTime',
+			width: '60px',
+			index: 8
+		}
+		oTimeAxiosFun = new oTimeAxios(param);
+	})
+</script>
+	
+   </body>
+</html>
